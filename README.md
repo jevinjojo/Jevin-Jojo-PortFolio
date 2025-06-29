@@ -9,4 +9,4 @@ Professional portfolio website showcasing blockchain development projects and op
 - Contact information
 
 ## Deployment
-Deployed on Vercel - [View Live](https://jevin-portfolio.vercel.app)
+Deployed on Vercel
