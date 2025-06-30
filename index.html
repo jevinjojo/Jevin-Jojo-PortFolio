@@ -6,9 +6,11 @@
     <title>Jevin - Blockchain Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-gray-900 text-white">
-    <header class="bg-gray-800 sticky top-0 z-50">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <header id="main-header" class="bg-gray-800 shadow-md sticky top-0 z-50 ">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#" class="text-2xl font-bold text-blue-400">Jevin Jojo</a>
@@ -18,10 +20,14 @@
                     <a href="#contact" class="hover:text-blue-400">Contact</a>
                 </div>
             </div>
+            <div class="mt-2 text-left ml-4 text-lg text-gray-400 italic hidden md:block">
+                ' Just a few years of focus and dedication can shape your entire journey — and always remember to thank God for every blessing along the way. '
+            </div>
         </nav>
     </header>
     <main class="container mx-auto px-4 py-8">
-        <section class="min-h-screen flex items-center">
+        <section id="hero" class="relative min-h-screen flex items-center">
+            <div id="particles-js" class="absolute inset-0"></div>
             <div class="container mx-auto px-6">
                 <h1 class="text-5xl font-bold mb-4">Blockchain Developer &<br>Open Source Contributor</h1>
                 <p class="text-xl mb-8 text-gray-300">Building decentralized applications and contributing to blockchain ecosystems</p>
@@ -31,13 +37,67 @@
                 </div>
             </div>
         </section>
+        <!-- Open Source Contributions First -->
+        <section id="opensource" class="py-20 bg-[#1a2332]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-12 text-center">Collaborative Software Development</h2>
+                <div class="space-y-8">
+                    <!-- CosmosJourneyer -->
+                    <div class="bg-gray-900 rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all border-2 border-blue-800">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-blue-400">CosmosJourneyer</h3>
+                            <a href="https://cosmosjourneyer.com/" target="_blank" class="text-gray-400 hover:text-white">cosmosjourneyer.com</a>
+                        </div>
+                        <p class="text-gray-300 mb-6">Space exploration game running directly in the browser with WebGL rendering and complex physics simulation.</p>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold">Add Music Volume Control Slider to Settings Panel</h4>
+                                <p class="text-gray-400 text-sm">Introduced a user-friendly volume slider in the settings panel.</p>
+                                <a href="https://github.com/BarthPaleologue/CosmosJourneyer/pull/463" target="_blank" class="text-blue-400 text-sm hover:underline">PR&nbsp;#463</a>
+                            </div>
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold">Old Workflows with Single CI Pipeline</h4>
+                                <p class="text-gray-400 text-sm">Streamlined CI by consolidating multiple workflows into a single pipeline.</p>
+                                <a href="https://github.com/BarthPaleologue/CosmosJourneyer/pull/410" target="_blank" class="text-blue-400 text-sm hover:underline">PR&nbsp;#410</a>
+                            </div>
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold">Add Screenshot Thumbnails to Save Files</h4>
+                                <p class="text-gray-400 text-sm">Added automatic thumbnail generation for game save files.</p>
+                                <a href="https://github.com/BarthPaleologue/CosmosJourneyer/pull/450" target="_blank" class="text-blue-400 text-sm hover:underline">PR&nbsp;#450</a>
+                            </div>
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold">Refactor Pause Menu UI in TypeScript</h4>
+                                <p class="text-gray-400 text-sm">Migrated pause menu implementation from HTML to TypeScript for better maintainability.</p>
+                                <a href="https://github.com/BarthPaleologue/CosmosJourneyer/pull/424" target="_blank" class="text-blue-400 text-sm hover:underline">PR&nbsp;#424</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hyperledger Besu -->
+                    <div class="bg-gray-900 rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all border-2 border-blue-800">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-blue-400">Hyperledger Besu</h3>
+                            <a href="https://www.hyperledger.org/projects/besu" target="_blank" class="text-gray-400 hover:text-white">hyperledger.org/projects/besu</a>
+                        </div>
+                        <p class="text-gray-300 mb-6">Enterprise-grade Java-based Ethereum client used by major organizations worldwide.</p>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold">LivenessCheck & ReadinessCheck Plugins</h4>
+                                <p class="text-gray-400 text-sm">Reimplemented health checks as plugins for better extensibility and customization</p>
+                                <a href="https://github.com/hyperledger/besu/pull/8854" target="_blank" class="text-blue-400 text-sm hover:underline">View Contribution</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Projects Second -->
         <section id="projects" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
                 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- CrowdFundPro -->
-                    <div class="bg-gray-800 rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all">
+                    <div class="bg-[#1a2332] rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all border-2 border-blue-800">
                         <h3 class="text-2xl font-bold mb-4 text-blue-400">CrowdFundPro</h3>
                         <p class="text-gray-300 mb-4">A revolutionary blockchain-powered crowdfunding platform ensuring complete transparency and security for both creators and backers.</p>
                         <p class="mb-6"><span class="font-semibold">Tech Stack:</span> Solidity, React, Node.js, IPFS</p>
@@ -52,7 +112,7 @@
                     </div>
                     
                     <!-- Handwritten Digit Recognition -->
-                    <div class="bg-gray-800 rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all">
+                    <div class="bg-[#1a2332] rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all border-2 border-blue-800">
                         <h3 class="text-2xl font-bold mb-4 text-blue-400">Handwritten Digit Recognition</h3>
                         <p class="text-gray-300 mb-4">Advanced machine learning system capable of recognizing handwritten digits with 98%+ accuracy using convolutional neural networks.</p>
                         <p class="mb-6"><span class="font-semibold">Tech Stack:</span> Python, TensorFlow, Keras, OpenCV</p>
@@ -65,52 +125,7 @@
                 </div>
             </div>
         </section>
-        <section id="opensource" class="py-20 bg-gray-800">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-12 text-center">Collaborative Software Development</h2>
-                
-                <div class="space-y-8">
-                    <!-- CosmosJourneyer -->
-                    <div class="bg-gray-900 rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-blue-400">CosmosJourneyer</h3>
-                            <a href="https://cosmosjourneyer.com/" target="_blank" class="text-gray-400 hover:text-white">cosmosjourneyer.com</a>
-                        </div>
-                        <p class="text-gray-300 mb-6">Space exploration game running directly in the browser with WebGL rendering and complex physics simulation.</p>
-                        
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-blue-500 pl-4">
-                                <h4 class="font-semibold">Music Volume Control Slider</h4>
-                                <p class="text-gray-400 text-sm">Implemented a dynamic volume control system for in-game audio settings</p>
-                                <a href="https://github.com/BarthPaleologue/CosmosJourneyer/pull/463" target="_blank" class="text-blue-400 text-sm hover:underline">View Contribution</a>
-                            </div>
-                            
-                            <div class="border-l-4 border-blue-500 pl-4">
-                                <h4 class="font-semibold">Refactored Pause Menu UI</h4>
-                                <p class="text-gray-400 text-sm">Migrated pause menu from HTML to TypeScript for better maintainability</p>
-                                <a href="https://github.com/BarthPaleologue/CosmosJourneyer/pull/424" target="_blank" class="text-blue-400 text-sm hover:underline">View Contribution</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Hyperledger Besu -->
-                    <div class="bg-gray-900 rounded-xl p-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-blue-400">Hyperledger Besu</h3>
-                            <a href="https://www.hyperledger.org/projects/besu" target="_blank" class="text-gray-400 hover:text-white">hyperledger.org/projects/besu</a>
-                        </div>
-                        <p class="text-gray-300 mb-6">Enterprise-grade Java-based Ethereum client used by major organizations worldwide.</p>
-                        
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-blue-500 pl-4">
-                                <h4 class="font-semibold">LivenessCheck & ReadinessCheck Plugins</h4>
-                                <p class="text-gray-400 text-sm">Reimplemented health checks as plugins for better extensibility and customization</p>
-                                <a href="https://github.com/hyperledger/besu/pull/8854" target="_blank" class="text-blue-400 text-sm hover:underline">View Contribution</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      
         </section>
         <section id="contact" class="py-20">
             <div class="container mx-auto px-6">
@@ -132,7 +147,7 @@
             </div>
         </section>
     </main>
-    <footer class="bg-gray-800 py-8">
+    <footer class="bg-[#1a2332] py-8">
         <div class="container mx-auto px-6 text-center text-gray-400">
             <p> 2025 Jevin Jojo. All rights reserved.</p>
             <p class="mt-2 text-sm">Built with passion for blockchain technology</p>

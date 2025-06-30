@@ -8,4 +8,27 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    
+}
+
+#particles-js {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 0;
+    pointer-events: none;
+}
+
+#particles-js canvas {
+    pointer-events: auto;
+}
+
+/* Ensure hero text sits above particles */
+#hero > .container {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+
 }
